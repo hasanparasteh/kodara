@@ -13,8 +13,9 @@
 
 :root {
     --background: #fafafa;
-    --theme: #4E342E;
-    --primary: #8D6E63;
+    --theme: #003a88;
+    --primary: rgba(0, 58, 136, 0.8);
+    --secondary: #d9d3cd;
     --footer: var(--theme);
 }
 
@@ -114,7 +115,7 @@ nav button:hover {
 }
 
 .hero .hero-text h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 900;
 }
 
@@ -162,14 +163,12 @@ nav button:hover {
 }
 
 #why {
-    background: linear-gradient(to top, var(--theme));
-    padding: 64px 24px;
-    padding-bottom: 128px;
+    background: var(--secondary);
+    padding: 64px 24px 128px;
 }
 
 #why .head-line {
     text-align: right;
-    color: white;
     max-width: 1100px;
     margin: 0 auto;
 
@@ -178,6 +177,7 @@ nav button:hover {
 #why .head-line h2 {
     font-size: 2rem;
     margin-bottom: 12px;
+    font-weight: bolder;
 }
 
 #why .head-line p {
@@ -189,7 +189,7 @@ nav button:hover {
     max-width: 1100px;
     margin: 128px auto 32px;
     font-size: 2rem;
-    color: white;
+    font-weight: bold;
 }
 
 #why .boxes {
@@ -197,9 +197,9 @@ nav button:hover {
     grid-template-columns: repeat(6, 1fr);
     gap: 32px;
     row-gap: 64px;
-    color: white;
     max-width: 1100px;
     margin: 0 auto;
+    font-weight: 500;
 }
 
 #why .boxes .box {
@@ -252,6 +252,14 @@ nav button:hover {
     margin-bottom: 16px;
     line-height: 28px;
 }
+
+#about-us div ul {
+    font-size: 20px;
+    margin-bottom: 16px;
+    margin-right: 16px;
+    line-height: 28px;
+}
+
 
 #features {
     display: grid;
@@ -339,10 +347,20 @@ footer span {
     display: none;
 }
 
+#projects .project-item img {
+    transition: all .4s ease-in-out;
+    scale: 1;
+}
+
+#projects .project-item:hover img {
+    scale: 1.5;
+}
+
 @media screen and (max-width: 1099px) {
     nav {
         margin-bottom: 0;
     }
+
     nav #menu {
         display: none;
     }
@@ -352,12 +370,15 @@ footer span {
         margin-right: auto;
         cursor: pointer;
     }
+
     #hamburger img {
         width: 32px;
     }
+
     nav button {
         display: none;
     }
+
     .hero {
         grid-template-columns: 1fr;
         color: white;
